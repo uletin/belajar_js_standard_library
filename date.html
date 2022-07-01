@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+        //Membuat Object Date
+        const date1 = new Date()
+        console.info(date1)
+
+        const date2 = new Date(2020, 10, 10)
+        console.info(date2)
+
+        const date3 = new Date(2020, 10, 10, 16, 15, 9, 123)
+        console.info(date3)
+
+        // Date Unix
+        const date4 = new Date(1656641226301)
+        console.info(date4)
+        }
+
+        {
+          // epoch & unix timestamp  -> konversi ke unix timestamp
+          const date1 = new Date()
+        console.info(date1.getTime())
+
+        const date2 = new Date(2020, 10, 10)
+        console.info(date2.getTime())
+
+        const date3 = new Date(2020, 10, 10, 16, 15, 9, 123)
+        console.info(date3.getTime())
+
+        // Date Unix, dan disarankan menggunakan Unix Times Millis 
+        const date4 = new Date(1656641226301)
+        console.info(date4.getTime())
+
+        console.info(Date.now())
+        }
+
+        {
+            // date parsing
+
+            const time = Date.parse("2020-10-10T08:45:45.123+07:00")
+            console.info(time)
+
+            const date = new Date(time)
+            console.info(date)
+        }
+
+        {
+            // date getter setter
+            const date = new Date()
+            date.setFullYear(2020)
+
+            console.info(date.getFullYear())
+            console.info(date.getMonth())
+            console.info(date.getDate())
+            console.info(date.getHours())
+            console.info(date.getMinutes())
+            console.info(date.getSeconds())
+            console.info(date.getMilliseconds())
+            console.info(date.getTimezoneOffset())
+
+        }
+    </script>
+</body>
+</html>
